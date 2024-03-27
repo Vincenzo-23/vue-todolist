@@ -32,7 +32,7 @@
                     <ul class="todo-list">
                         <li v-for="(todo, i) in todos" class="todo-item" :class=" todos[i].done === true ? `lined` : `` ">
                             {{ todo.text }}
-                            <button @click="todos[i].done = true" class="btn-done">Done</button>
+                            <button @click="doneToggle(i)" class="btn-done">Done</button>
                             <button  @click="removeTodo(i)" class="btn-remove">X</button>
                         </li>
                     </ul>

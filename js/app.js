@@ -42,8 +42,15 @@ const { createApp } = Vue
                     }
                 )
             }
-            
+
             this.inputValue = ""
+        },
+        doneToggle(i){
+            if (this.todos[i].done === false) {
+				this.todos[i].done = true
+			} else {
+				this.todos[i].done = false
+			}
         }
         
     },
