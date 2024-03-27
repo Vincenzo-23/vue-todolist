@@ -10,14 +10,27 @@
 <body>
 
     <div id="app">
-        <ul class="todo-list">
-            <li v-for="(todo, i) in todos" class="todo-item" :class=" todos[i].done === true ? `lined` : `` ">
-                {{ todo.text }}
-                <button @click="todos[i].done = true" class="btn-done">Done</button>
-                <button  @click="removeTodo(i)" class="btn-remove">X</button>
-            </li>
-        </ul>
-
+        <section class="container">
+            <div class="card">
+                <div class="card-header">
+                    <input
+                    type="text" 
+                    placeholder="Nuova todo..."
+                    v-model.trim="inputValue">
+                    <button @click="addTodo()" class="btn-add">Aggiungi</button>
+                </div>
+                <div class="card-body">
+                    <ul class="todo-list">
+                        <li v-for="(todo, i) in todos" class="todo-item" :class=" todos[i].done === true ? `lined` : `` ">
+                            {{ todo.text }}
+                            <button @click="todos[i].done = true" class="btn-done">Done</button>
+                            <button  @click="removeTodo(i)" class="btn-remove">X</button>
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
+        </section>
     </div>
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>

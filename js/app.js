@@ -25,16 +25,29 @@ const { createApp } = Vue
                 done: false,
             },
           ],
+          inputValue: "",
       }
     },
     methods: {
         removeTodo(i){
             this.todos.splice(i,1)
+        },
+        addTodo(){
+            if(this.inputValue !== "") {
+
+                this.todos.push(
+                    {
+                        text: this.inputValue,
+                        done: false,
+                    }
+                )
+            }
+            
+            this.inputValue = ""
         }
         
     },
-    mounted(){
-    }
+    
   }).mount('#app')
 
 
