@@ -1,5 +1,88 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: sans-serif;
+    background-color: rgb(234, 234, 234);
+}
+
+ul, ol, menu{
+    list-style: none;
+}
+
+.container{
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.main-header{
+    padding: 24px;
+    background-color: salmon;
+    color: white;
+    text-align: center;
+}
+
+.logo{
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.card{
+    border-radius: 10px;
+    background-color: white;
+}
+
+.todo-section{
+    padding: 80px 20px;
+}
+
+.todo-item{
+    line-height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 0 24px;
+    margin: 0 -24px;
+    border-top: 1px solid rgb(221, 220, 220)
+}
 
 
+.todo-item:first-child{
+    border-top: none;
+} 
+    
+.todo-item:hover{
+    background-color: rgb(241, 241, 241);
+}
+
+
+.card-header{
+    padding: 16px 24px;
+    background-color: salmon;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+}
+
+.card-body{
+    padding: 24px;
+}
+
+
+input:focus-visible{
+    outline: none;
+}
+
+.add-todo{
+    border: none;
+    border-radius: 8px;
+    height: 32px;
+    padding: 12px;
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 100%;
+}
 
 .lined{
     text-decoration: line-through;
@@ -13,6 +96,7 @@
     padding: 5px 10px;
     border-radius: 10px;
     cursor: pointer;
+    background-color: rgb(228, 227, 227);
 }
 
 .btn-done{
@@ -22,3 +106,4 @@
 .btn-remove{
    color: red;
 }
+

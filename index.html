@@ -10,10 +10,19 @@
 <body>
 
     <div id="app">
-        <section class="container">
+        <header class="main-header">
+            <nav>
+                <div class="logo">
+                    TO DO LIST
+                </div>
+            </nav>
+        </header>
+        <section class="container todo-section">
             <div class="card">
                 <div class="card-header">
                     <input
+                    @keydown.enter="addTodo()"
+                    class="add-todo"
                     type="text" 
                     placeholder="Nuova todo..."
                     v-model.trim="inputValue">
