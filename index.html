@@ -10,8 +10,14 @@
 <body>
 
     <div id="app">
-        
-        
+        <ul class="todo-list">
+            <li v-for="(todo, i) in todos" class="todo-item" :class=" todos[i].done === true ? `lined` : `` ">
+                {{ todo.text }}
+                <button @click="todos[i].done = true" class="btn-done">Done</button>
+                <button class="btn-remove">X</button>
+            </li>
+        </ul>
+
     </div>
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>

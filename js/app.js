@@ -27,6 +27,20 @@ const { createApp } = Vue
           ],
       }
     },
+    methods: {
+        doneToggle() {
+			
+            if (this.todos.done === false) {
+				this.todos.done = true
+			} else {
+				this.todos.done = false
+			}
+            console.log(this.done)
+        }
+        
+    },
+    mounted(){
+    }
   }).mount('#app')
 
 

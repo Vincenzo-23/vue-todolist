@@ -1,0 +1,24 @@
+
+
+
+.lined{
+    text-decoration: line-through;
+}
+
+.btn-done,
+.btn-remove{
+    border:none;
+   
+    margin-left: 20px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn-done{
+    color: green;
+}
+
+.btn-remove{
+   color: red;
+}
